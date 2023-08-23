@@ -1,84 +1,53 @@
-*{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    /* background: linear-gradient(240deg, #56d8e4 30%, #9f01ea 90%); */
-    
-}
-body{
+* {
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+ 
+ body {
    background-color: beige;
-}
+   margin: 0;
+   padding: 0;
+ }
  
-    /* background-color:beige; */
-    /* background: linear-gradient(to right, sky rgb(131, 131, 231), rgb(218, 137, 218)); */
-    
+ #main .page {
+   width: 80%;
+   margin: 100px auto;
+   background-color: white;
+   padding: 20px 50px;
+   border-radius: 7px;
+   box-shadow: 2px 2px 2px black;
+   text-align: center;
+ }
  
-
-/* 
-.header h1{ 
-   background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea); 
-   color: white; 
-    background:linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea); 
-}  */
-
-#main .page{
-    width: 50%;
-    margin-top: 100px;
-    margin-left: 13%;
-    background-color: white;
-    padding: 20px 50px;
-    border-radius: 7px;
-    box-shadow: 2px 2px 2px black;
-    border: 10px;
-    text-align: center;
+ #main .page .header h1 {
+   color: #000;
+ }
  
-
-   }
-
-
-#main .page .name .username{
+ #main .page input[type="text"],
+ #main .page input[type="password"],
+ #main .page select {
    width: 100%;
-   padding:10px 10px;
-   margin-right: 100px;
+   padding: 10px;
    margin-bottom: 10px;
-}
-
-#main .page .contact .contact{
-    width: 100%;
-    padding:10px;
-    margin-bottom: 10px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
  }
-
-
- #main .page .mail .mail{
-    width: 100%;
-    padding:10px;
-    margin-bottom: 10px;
- }
-
-  
- #main .page .select .option {
-   width: 112%;
-   padding:10px;
-   margin-bottom: 10px;
-
-}
-
- #main .page .password .password{
-    width: 100%;
-    padding:10px;
-    margin-bottom: 10px;
- }
-/* 
- #main .page .confirm .confirmpassword{
-    width: 61%;
-    padding:10px;
-    margin-bottom: 10px;
- } */
-
  
- #main .page .sub #submit{
-    width: 50%;
-    padding:10px;
-    color: white;
-    background-color:beige;
+ #main .page #submit {
+   width: 100%;
+   padding: 10px;
+   color: white;
+   background-color: #9f01ea;
+   border: none;
+   border-radius: 5px;
  }
-
+ 
+ @media screen and (min-width: 768px) {
+   #main .page {
+     width: 50%;
+     margin-left: 25%;
+   }
+ }
+ button.disabled {
+   opacity: 0.5;
+ } 

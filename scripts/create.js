@@ -1,60 +1,42 @@
-// function checkForm () {
-//  let nameInput = document.getElementById('Name');
-//  let contactInput = document.getElementById('Contact');
-//  let mailInput = document.getElementById('Mail');
-//  let roleInput = document.getElementById('Role');
-//  let passwordInput = document.getElementById('Password');
-//  let submitInput = document.getElementById('submit');
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("myform");
+    const submit = document.getElementById("submit");
+    const usernameInput = document.getElementById("Name");
+    const contactInput = document.getElementById("Contact");
+    const mailInput = document.getElementById("Mail");
+    const roleInput = document.getElementById("Role");
+    const passwordInput = document.getElementById("Password");
 
- 
-//  if(nameInput.value === '' &&    contactInput.value === '' &&    mailInput.value === '' &&    roleInput.value === '' &&   passwordInput.value === '' )
-//  {
-//     submitInput.disabled = true;
-//  } else{
-//     submitInput.disabled = false;
-//  }
-// }
+    function areAllFieldsFilled() {
+        return (
+            usernameInput.value.trim() !== "" &&
+            contactInput.value.trim() !== "" &&
+            mailInput.value.trim() !== "" &&
+            roleInput.value !== "select person type" &&
+            passwordInput.value.trim() !== ""
+        );
+    }
 
+    function toggleSubmitButton() {
+        submit.disabled = !areAllFieldsFilled();
 
-
-
-const form = document.getElementById("myform");
-const submit = document.getElementById("submit");
-
-form.addEventListener("input",() => {
-    const inputs = form.querySelectorAll("input");
-    let allFilled = true;
-
-    inputs.forEach(input => {
-        if (input.value){
-            allFilled = false;
+        if (submit.disabled) {
+            submit.style.opacity = 0.5;
+            submit.value = "Submit";
+        } else {
+            submit.style.opacity = 1;
+            submit.value = "Submit";
         }
-    });
-    submit.disabled = !allFilled;
-})
+    }
 
 
+    toggleSubmitButton();
 
+    usernameInput.addEventListener("input", toggleSubmitButton);
+    contactInput.addEventListener("input", toggleSubmitButton);
+    mailInput.addEventListener("input", toggleSubmitButton);
+    roleInput.addEventListener("change", toggleSubmitButton);
+    passwordInput.addEventListener("input", toggleSubmitButton);
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    let submitButton = document.getElementById("submit")
-    submitButton.addEventListener("click", register)
-})
-const register = (e) => {
-    e.preventDefault()
-   
-const Name = document.getElementById("Name").value
-const contact = document.getElementById("Contact").value
-const password = document.getElementById("Password").value
-const  role= document.getElementById("Role").value
-
-
-axios.post("https://server-api1-li2k.onrender.com/api/user/add",{Name,contact,password,role
-}).then(res=> {console.log(res.data);
-})
-.catch(err=> {console.log(err)})
-.finally(() =>{
-    console.log("finally is running");
-    window.location.replace("Login.html")
-})
-}
+    submit.addEventListener("click", register);
+});
