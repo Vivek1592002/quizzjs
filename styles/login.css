@@ -1,0 +1,64 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+body{
+    background-color:beige;
+}
+
+
+
+
+#main .page{
+    width: 30%;
+    margin-top: 100px;
+    margin-left: 35%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px black;
+    border: 10px;
+    text-align: center;
+    
+
+   }
+
+
+#main .page .name .username{
+   width: 70%;
+   padding:10px;
+   margin-bottom: 10px;
+
+}
+
+
+ #main .page .password .password{
+    width: 70%;
+    padding:10px;
+    margin-bottom: 10px;
+ }
+
+ 
+ #main .page .select .option {
+    width: 75%;
+    padding:10px;
+    margin-bottom: 10px;
+
+ }
+
+
+ #main .page .create{
+   width: 70%;
+   padding: 10px 75px;
+   margin-bottom: 10px;
+  
+ }
+
+ 
+ #main .page .sub #submit{
+    width: 30%;
+    padding:10px;
+    color: white;
+    background-color: green;
+ }
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craete Account</title>
+    <link rel="stylesheet" href="./styles/create.css">
+    <script src="scripts/create.js" type="module"> 
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js">
+    </script>
+</head>
+<body>
+ <form id="myform">  
+    <div id="main">
+    <div class="page">
+        <div class="header">
+            <h1>Create Account</h1>
+        </div>
+        
+            <div class="name">
+            <input type="text" class="username" required placeholder="Username" id="Name" pattern="[A-Z a-z]+"   >
+        </div>
+        <div class="contact">
+            <input type="text" class="contact" required placeholder="Contact No." id="Contact" pattern="[0-9]{10}">
+        </div>
+        <div class="mail">
+            <input type="text" class="mail" required placeholder="Mail ID"  id="Mail" >
+        </div>
+        <div class="select">
+            
+            <select name="" class="option" id="Role"  >
+            <option value="select person type" disabled selected > select person type</option>
+            <option value="student"> Student </option>
+            <option value="faculty"> Faculty</option>
+            
+            </select>
+        </div>
+        <div class="password">
+            <input type="password" class="password"  required placeholder="PassWord" id="Password" >
+        </div>
+        
+        <!-- <div class="confirm">
+            <input type="password" class="confirmpassword" required placeholder="Confirm PassWord" >
+        </div> -->
+        <div class="sub">
+            <input type="submit" id="submit" value="Submit" disabled>
+        </div>
+   
+       
+    
+
+    </div>
+    
+
+    </div>
+</form> 
+
+</body>
+</html> 
