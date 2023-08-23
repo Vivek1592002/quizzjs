@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="default/style.css">
+    
+</head>
+<body>
+      <div class="main">
+        <p id="timer">60:00</p>
+      <div id="inner">
+        <h1 id="questionbox">1 This is my first question</h1>
+        <div class="first">
+            <input class="options" type="radio" id="option1" value="a" name=option/ >
+            <label for="option1">option 1</label>
+        </div>
+        <div class="first">
+            <input class="options" type="radio" id="option2" value="b"  name=option/>
+            <label for="option2">option 2</label>
+        </div>
+        <div class="first">
+            <input class="options"  type="radio" id="option3" value="c"  name=option/>
+            <label for="option3">option 3</label>
+        </div>
+        <div class="first">
+            <input class="options" type="radio" id="option4" value="d"  name=option/>
+            <label for="option4">option 4</label>
+        </div>
+        <div class="pbtn">
+        <div> 
+            <button id="btn" onclick="previous()" >
+                Previous
+            </button>
+        </div>
+        <div>
+            <button id="btn" onclick="submitQuiz()">
+                Save&Next
+            </button>
+        </div>
+    </div>
+</div>  
+
+      <script src="app/quiz.js"></script>
+</body>
+</html>
