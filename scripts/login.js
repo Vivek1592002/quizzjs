@@ -18,9 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    submitButton.onclick = function () {
-        location.href = "student3.html";
-    };
+   
     toggleSubmitButton();
 
     contactInput.addEventListener("input", toggleSubmitButton);
@@ -45,8 +43,15 @@ const login = (e) => {
             console.log(res.data);
             if (res.data.user.role === "student") {
                 window.location.replace("student3.html");
+                
+    submitButton.onclick = function () {
+        location.href = "student3.html";
+    };
             } else {
                 window.location.replace("Faculty.html");
+                submitButton.onclick = function () {
+                    location.href = "Faculty.html";
+                };
             }
             localStorage.setItem("loggedInuser",JSON.stringify(res.data.user))
             console.log(JSON.parse(localStorage.getItem("loggedInuser")).contact)
