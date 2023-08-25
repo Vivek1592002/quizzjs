@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/question-form.css">
+    <script src="./scripts/question-form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <form id="myform">  
+        <div id="main">
+        <div class="page">
+            <div class="header">
+                <h1>Add question</h1>
+            </div>
+            
+                <div class="question">
+                <input type="text" class="username" required placeholder="Enter the question" id="Question"   >
+            </div>
+           
+            <div class="option1">
+                <input type="text" class="username" required placeholder="option1" id="Optionvalue1"   >
+            </div>
+            
+            <div class="option2">
+                <input type="text" class="username" required placeholder="option2" id="Optionvalue2"   >
+            </div>
+            
+            <div class="option3">
+                <input type="text" class="username" required placeholder="option3" id="Optionvalue3"   >
+            </div>
+            
+            <div class="option4">
+                <input type="text" class="username" required placeholder="option4" id="Optionvalue4"   >
+            </div>
+            <div class="select">
+            
+                <select name="" class="chooseanswer" id="Choose">
+                <option value="select person type" disabled selected id="selectoption"> correct answer</option>
+                <option id="option1" value="1"></option>
+                <option id="option2" value="2"></option>
+                <option id="option3" value="3"></option>
+                <option id="option4" value="4"></option>
+                </select>
+                </div>
+                <div class="selector">
+                <select id="quizSelector">
+                </select> 
+                </div>
+            
+            <div class="sub">
+                <input type="button" id="addQuestionButton" value="Add question" >
+            </div>
+       
+           
+        
+    
+        </div>
+        
+    
+        </div>
+    </form> 
+    
+</body>
+</html>

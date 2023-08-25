@@ -4,7 +4,7 @@
  }
  
  body {
-   background-color: beige;
+   background-color:white;
    margin: 0;
    padding: 0;
  }
@@ -15,7 +15,7 @@
    background-color: white;
    padding: 20px 50px;
    border-radius: 7px;
-   box-shadow: 2px 2px 2px black;
+   box-shadow: 2px 2px 2px 2px #ccc;
    text-align: center;
  }
  
@@ -37,9 +37,10 @@
    width: 100%;
    padding: 10px;
    color: white;
-   background-color: #9f01ea;
+   background-color: #007bff;
    border: none;
    border-radius: 5px;
+   box-shadow: 2px 2px 2px 1px #ccc;
  }
  
  @media screen and (min-width: 768px) {

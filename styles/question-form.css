@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+  }
+ 
+  body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #main .page {
+    width: 80%;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px #ccc;
+    text-align: center;
+  }
+  
+  
+  
+ .question{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    
+    
+  }
+
+  .question .username{
+    padding: 10px;
+  }
+ 
+  .option1{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  .option1 .username{
+    padding: 10px;
+  }
+
+  .option2{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  
+  .option2 .username{
+    padding: 10px;
+  }
+
+  .option3{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  
+  .option3 .username{
+    padding: 10px;
+  }
+
+  .option4{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  
+  .option4 .username{
+    padding: 10px;
+  }
+
+  
+  .select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  .select .chooseanswer{
+    padding: 10px 50px
+  }
+ 
+  
+  #addQuestionButton{
+    width: 60%;
+    padding: 10px 0px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    #main .page {
+      width: 50%;
+      margin-left: 25%;
+    }
+ } 
+ 
+ 
+ 
+ 
+  
+ 

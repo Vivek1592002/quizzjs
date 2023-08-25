@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("myform");
     const submit = document.getElementById("submit");
@@ -29,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
     toggleSubmitButton();
 
     usernameInput.addEventListener("input", toggleSubmitButton);
@@ -40,3 +40,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submit.addEventListener("click", register);
 });
+
+const register = (e) => {
+    e.preventDefault();
+
+    const submitButton = document.getElementById("submit");
+    submitButton.value = "Submitting...";
+
+    const Name = document.getElementById("Name").value;
+    const contact = document.getElementById("Contact").value;
+    const password = document.getElementById("Password").value;
+    const role = document.getElementById("Role").value;
+
+    axios
+        .post("https://server-api1-li2k.onrender.com/api/user/add", {
+            Name,
+            contact,
+            password,
+            role,
+        })
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        .finally(() => {
+            console.log("finally is running");
+            window.location.replace("Login.html");
+        });
+};
+
+document.getElementById("submit").disabled = true;

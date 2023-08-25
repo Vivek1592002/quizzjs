@@ -1,21 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-top;
-}
+
 
 
 body{
-    background-color:lightgray;
+    background-color:white;
     font-family: 'Roboto', sans-serif;
+}
+
+#quebox{
+    font-size: 20px;
 }
 
 
 .main{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
-    justify-content:center;
+    justify-content: space-between;
+    margin-left: 10px;
     align-items: center;
     flex-direction: column;
 }
@@ -25,7 +26,7 @@ body{
     height: 45vh;
     width: 70%;
     margin: 0% 0% 20% 0%;
-    border-radius: 3%;
+    border-radius: 2%;
     box-shadow: 0px 0px 5px black;
     background-color:white;
     padding: 10% 10% 20% 5%;
@@ -49,7 +50,7 @@ body{
 .main #inner #btn{
     width: 100%;
     padding: 5px;
-    background-color:lightgray;
+    background-color: #007bff;
     border-radius: 5px;
     border-color:black;
     font-size: 20px;
@@ -61,10 +62,21 @@ body{
 .main #timer{
     background-color: white;
     width: 35%;
-    margin: 0% 35% 60px 80%;
+    margin-left: 200px;
     border-radius: 5px;
     border-color: black;
     box-shadow: 0px 0px 5px black;
-    height: 50px;
-    font-size: 50px;
+    height: 30px;
+    font-size: 30px;
+    padding: 0px 10px;
+} 
+#btnPrevious{
+    display: none;
+    width: 100%;
+    padding: 5px;
+    background-color: #007bff;
+    border-radius: 5px;
+    border-color:black;
+    font-size: 20px;
+    color:black;
 }

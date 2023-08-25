@@ -24,14 +24,13 @@ const questions = [
         'correct':'b'
     }
 ]
-
-
+ 
 let index = 0;
 let correct = 0;
 let wrong = 0;
 let total = questions.length;
-const startingMinutes = 59;
-let time = startingMinutes *60 +60;
+const startingMinutes = 0;
+let time = 10;
 
 const quebox = document.getElementById("quebox");
 const optionInp = document.querySelectorAll('.options');
@@ -39,6 +38,7 @@ const innerend = document.getElementById("inner") ;
 const countElement = document.getElementById("timer");
 
 const loadQuestion = () => {
+    time =10
     if(index == total)
     {
         end();
@@ -54,6 +54,8 @@ const loadQuestion = () => {
   }
 
  const submitQuiz = () =>{
+
+    document.getElementById('btnPrevious').style.display = 'block';
     const data = questions[index];
     const ans = getAnswer();
     if(ans == data.correct)
@@ -82,10 +84,13 @@ const loadQuestion = () => {
 
 
   const previous = () =>{
-    
     if(index > 0)
     {
         index--;
+    }
+    if(index === 0){
+        document.getElementById('btnPrevious').style.display = 'none';
+
     }
     loadQuestion();
     return;
@@ -106,12 +111,14 @@ innerend.innerHTML = `
 <h1>Congratulation for completing this quiz</h1>
 <h2>your score is ${correct} out of ${total}</h2>`
 setTimeout();
-  }
+
+
+
+}
 
 function setTimeout() {
     countElement.innerHTML = `${0}+ ${0}`;
 }
-
 
 setInterval(updateCountdown, 1000);
 
@@ -121,5 +128,8 @@ function updateCountdown(){
     seconds = seconds < 10 ? '0'+seconds : seconds;
     countElement.innerHTML = `${minutes}:${seconds}`;
     time--;
+    if(time === 0){
+        submitQuiz();
+    }
 }
   loadQuestion();
