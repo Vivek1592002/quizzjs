@@ -13,7 +13,7 @@ const questions = [
         'b':'CSS',
         'c':'Javascript',
         'd':'None of these',
-        'correct':'a'
+        'correct':'d'
     },
     {
         'que': 'Cascading style sheet is also known as',
@@ -24,14 +24,14 @@ const questions = [
         'correct':'b'
     }
 ]
-
-
+ 
 let index = 0;
 let correct = 0;
 let wrong = 0;
 let total = questions.length;
-const startingMinutes = 59;
-let time = startingMinutes *60 +60;
+const startingMinutes = 0;
+let time = 10;
+let countdownElement;
 
 const quebox = document.getElementById("quebox");
 const optionInp = document.querySelectorAll('.options');
@@ -44,6 +44,7 @@ const loadQuestion = () => {
         end();
     }else
     reset();
+    
     const data = questions[index]
     console.log(data)
     quebox.innerHTML = `${index+1})${data.que}`;
@@ -51,9 +52,14 @@ const loadQuestion = () => {
     optionInp[1].nextElementSibling.innerHTML = data.b;
     optionInp[2].nextElementSibling.innerHTML = data.c;
     optionInp[3].nextElementSibling.innerHTML = data.d;
+    
+
   }
 
  const submitQuiz = () =>{
+    
+   time = 10;
+    document.getElementById('btnPrevious').style.display = 'block';
     const data = questions[index];
     const ans = getAnswer();
     if(ans == data.correct)
@@ -82,10 +88,13 @@ const loadQuestion = () => {
 
 
   const previous = () =>{
-    
     if(index > 0)
     {
         index--;
+    }
+    if(index === 0){
+        document.getElementById('btnPrevious').style.display = 'none';
+
     }
     loadQuestion();
     return;
@@ -101,25 +110,27 @@ const loadQuestion = () => {
 
 
   const end = () =>{
+    clearInterval(countdownElement);
     alert("Are you want to submit the quiz")
 innerend.innerHTML = `
 <h1>Congratulation for completing this quiz</h1>
 <h2>your score is ${correct} out of ${total}</h2>`
-setTimeout();
+
   }
+countdownElement = setInterval(updateCountdown, 1000);
 
-function setTimeout() {
-    countElement.innerHTML = `${0}+ ${0}`;
-}
-
-
-setInterval(updateCountdown, 1000);
-
-function updateCountdown(){
+function updateCountdown() {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-    seconds = seconds < 10 ? '0'+seconds : seconds;
-    countElement.innerHTML = `${minutes}:${seconds}`;
-    time--;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    countElement.innerHTML = `${0}${minutes}:${seconds}`;
+    if (time > 0) {
+        time--;
+    } else {
+       
+        submitQuiz(); // Submit the quiz when time is up
+    }
 }
+
+
   loadQuestion();

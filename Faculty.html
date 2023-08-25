@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create  Quiz</title>
+    <link rel="stylesheet" href="styles/faculty.css">
+    <script type="module" src="./scripts/create quiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js">
+    </script>
+    </head>
+    <body>
+
+<div id="main" >
+        <div class="page">
+       <div>
+        <h1>create quiz</h1>
+       </div>
+        
+        <div class="name">
+            <input type="text" required  placeholder="Title" pattern="[A-Z a-z]+" id="Title" >
+        </div> 
+        <div class="discription">
+            <input type="text"  required placeholder="DESCRIPTION" id="Description" >
+        </div>
+        <div class="sub">
+            <input type="button" value="create" id="submit" >
+        </div>
+        <div class="text">
+            <h1>Add question to existing quiz</h1>
+        </div>
+
+        <div class="add">
+            <input type="button" value="Add question" id="adds" >
+        </div>
+
+        <button class='Button' id="logs">
+            <img src ="logout.png" alt ="logout" class='logout-icon'/>
+          </button>
+        
+</div>
+</div>
+
+    </body>

@@ -1,10 +1,10 @@
-* {
+ * {
    box-sizing: border-box;
    font-family: Arial, sans-serif;
  }
 
  body {
-   background-color: beige;
+   background-color: white;
    margin: 0;
    padding: 0;
  }
@@ -15,29 +15,37 @@
    background-color: white;
    padding: 20px 50px;
    border-radius: 7px;
-   box-shadow: 2px 2px 2px black;
+   box-shadow: 2px 2px 5px #ccc;
    text-align: center;
  }
  
- #main .page .header h1 {
-   color: #000;
- }
  
- #main .page input[type="text"],
- #main .page input[type="password"],
- #main .page select {
+ 
+.contact {
    width: 100%;
    padding: 10px;
-   margin-bottom: 10px;
    border-radius: 5px;
-   border: 1px solid #ccc;
+   
  }
+
+  
+.password {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  
+}
+
+.create{
+  margin-bottom: 8px;
+}
  
- #main .page #submit {
+ #submit {
    width: 100%;
    padding: 10px;
    color: white;
-   background-color: #9f01ea;
+   background-color: #007bff;
    border: none;
    border-radius: 5px;
  }
@@ -47,4 +55,9 @@
      width: 50%;
      margin-left: 25%;
    }
-}
+} 
+
+
+
+
+ 

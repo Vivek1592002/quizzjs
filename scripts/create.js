@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("myform");
     const submit = document.getElementById("submit");
@@ -52,14 +53,14 @@ const register = (e) => {
     const role = document.getElementById("Role").value;
 
     axios
-        .post("https://server-api1-li2k.onrender.com/api/user/add", {
+        .post("https://quizattendace.onrender.com/api/user/add", {
             Name,
             contact,
             password,
             role,
         })
         .then((res) => {
-            console.log(res.data);
+            console.log(res.data.user);
         })
         .catch((err) => {
             console.log(err);
