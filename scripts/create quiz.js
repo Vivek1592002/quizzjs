@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     let addButton = document.getElementById("adds")
     addButton.addEventListener("click", add)
+
+    let logoutButton = document.getElementById("logs")
+    logoutButton.addEventListener("click", logout)
 })
 const register = (e) => {
     e.preventDefault()
@@ -29,3 +32,9 @@ axios.post("https://quizattendace.onrender.com/api/quiz/add", newQuiz)
 const add = () => {
     window.location.href="Question-form.html"
 }
+
+const logout = () => {
+    localStorage.clear()
+    window.location.href="Login.html"
+    
+  };

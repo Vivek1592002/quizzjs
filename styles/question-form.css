@@ -102,6 +102,18 @@
     border: none;
     border-radius: 5px;
   }
+
+  .Button{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .logout-icon{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
   
   @media screen and (min-width: 768px) {
     #main .page {

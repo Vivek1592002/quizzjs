@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded',() => {
     selectoption.addEventListener("click", optionvalue)
     let addoption = document.getElementById("addQuestionButton")
     addoption.addEventListener("click", addquestion)
+    let logoutButton = document.getElementById("logs")
+    logoutButton.addEventListener("click", logout)
 
     axios.get('https://quizattendace.onrender.com/api/quiz/read')
     .then(res => {
@@ -52,3 +54,10 @@ const addquestion = () => {
 
                     })
                 }
+
+
+    const logout = () => {
+        localStorage.clear()
+     window.location.href="Login.html"
+                    
+    };

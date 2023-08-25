@@ -36,14 +36,17 @@ const login = (e) => {
     const contact = document.getElementById("Contact").value;
     const password = document.getElementById("Password").value;
 
-    axios.post("https://server-api1-li2k.onrender.com/api/user/login", { contact, password })
+    axios.post("https://quizattendace.onrender.com/api/user/login", { contact, password })
         .then((res) => {
             console.log(res.data);
-            if (res.data.role === "student") {
+            if (res.data.user.role === "student") {
                 window.location.replace("Student.html");
             } else {
                 window.location.replace("Faculty.html");
             }
+            localStorage.setItem("loggedInuser",JSON.stringify(res.data.user))
+            console.log(JSON.parse(localStorage.getItem("loggedInuser")).contact)
+        
         })
         .catch((err) => {
             console.log(err);
