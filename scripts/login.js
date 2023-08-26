@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+   
     toggleSubmitButton();
 
     contactInput.addEventListener("input", toggleSubmitButton);
@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submitButton.addEventListener("click", login);
 });
+
+
 
 const login = (e) => {
     e.preventDefault();
@@ -43,6 +45,9 @@ const login = (e) => {
                 window.location.replace("student3.html");
             } else {
                 window.location.replace("Faculty.html");
+                submitButton.onclick = function () {
+                    location.href = "Faculty.html";
+                };
             }
             localStorage.setItem("loggedInuser",JSON.stringify(res.data.user))
             console.log(JSON.parse(localStorage.getItem("loggedInuser")).contact)
