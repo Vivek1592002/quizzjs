@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 })
 const register = (e) => {
     e.preventDefault()
-    console.log("Hello Aman ")
 let title = document.getElementById("Title").value
 let description = document.getElementById("Description").value
 const newQuiz = new Quiz(title,description)
@@ -19,7 +18,6 @@ const newQuiz = new Quiz(title,description)
 axios.post("https://quizattendace.onrender.com/api/quiz/add", newQuiz)
         .then(response => {
             console.log(response)
-            // navigate("/question-form")
         }).catch(console.log)
         .finally(() => {
             e.target.value = "Add Quiz"
@@ -27,7 +25,6 @@ axios.post("https://quizattendace.onrender.com/api/quiz/add", newQuiz)
             title=""
             description=""
             window.location.href="Question-form.html"
-            // setDuration(0)
         })}
 const add = () => {
     window.location.href="Question-form.html"

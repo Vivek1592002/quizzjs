@@ -40,7 +40,7 @@ const login = (e) => {
         .then((res) => {
             console.log(res.data);
             if (res.data.user.role === "student") {
-                window.location.replace("Student.html");
+                window.location.replace("student3.html");
             } else {
                 window.location.replace("Faculty.html");
             }

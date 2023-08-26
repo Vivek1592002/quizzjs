@@ -53,6 +53,7 @@ const addquestion = () => {
                         console.log(response);
 
                     })
+                    // window.location.href="Login.html"
                 }
 
 
