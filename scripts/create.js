@@ -51,6 +51,7 @@ const register = (e) => {
     const contact = document.getElementById("Contact").value;
     const password = document.getElementById("Password").value;
     const role = document.getElementById("Role").value;
+   
 
     axios
         .post("https://quizattendace.onrender.com/api/user/add", {
@@ -68,7 +69,8 @@ const register = (e) => {
         .finally(() => {
             console.log("finally is running");
             window.location.replace("Login.html");
+            alert("You are Succesfully registered!");
         });
 };
 
-document.getElementById("submit").disabled = true;
+//document.getElementById("submit")= true;

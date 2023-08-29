@@ -1,6 +1,7 @@
 const quizContainer = document.getElementById('quizContainer');
 const quizDisplay = document.getElementById('quizDisplay');
 
+
 let quizes = [];
 let selectedQuiz = null;
 let questions = [];
@@ -36,9 +37,12 @@ function fetchQuestions() {
   axios.get(`https://quizattendace.onrender.com/api/quiz/read`)
     .then(response => {
       questions = selectedQuiz.ques;
+
+
       renderQuestion();
     })
     .catch(error => console.error('Error fetching questions:', error));
+    
 }
 
 function renderQuestion() {

@@ -1,0 +1,55 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('https://i.pinimg.com/originals/5b/4c/d2/5b4cd292f6f382ab8d8a51b9fcaad5ed.jpg');
+    background-size: cover;
+    
+  }
+
+  header {
+    background-color: rgb(51, 94, 125);
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  header h2 {
+    margin: 0;
+  }
+
+  .welcome-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(51, 94, 125);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+  }
+
+  .start-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .start-button:hover {
+    background-color:rgb(43, 44, 44);
+  }
+  
+  
