@@ -31,21 +31,26 @@ const optionvalue = () => {
 
 const addquestion = () => {
 
-        const question = document.getElementById('Question').value;
+        // const question = document.getElementById('Question').value;
+        const ques = document.getElementById('Question').value;
         const option1 = document.getElementById('Optionvalue1').value;
         const option2 =  document.getElementById('Optionvalue2').value;
         const option3 = document.getElementById('Optionvalue3').value;
         const option4 = document.getElementById('Optionvalue4').value; 
-        const answer = document.getElementById('Choose').value;
+        // const answer = document.getElementById('Choose').value;
+        const correctAnsIndex = document.getElementById('Choose').value;
         const quizId = document.getElementById('quizSelector').value;
 
     
         
 
     const newQuestion = {
-        question,
-        options: [option1, option2, option3, option4],
-        answer,
+        // question,
+        ques,
+        // options: [option1, option2, option3, option4],
+         ans : [option1, option2, option3, option4],
+        // answer,
+        correctAnsIndex,
         quizId
      };
           axios.post("https://quizattendace.onrender.com/api/ques/add", newQuestion)

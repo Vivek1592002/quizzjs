@@ -92,7 +92,11 @@
   .select .chooseanswer{
     padding: 10px 50px
   }
- 
+ #quizSelector{
+  padding: 10px 50px;
+  margin: 15px auto;
+
+ }
   
   #addQuestionButton{
     width: 60%;

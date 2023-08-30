@@ -1,3 +1,4 @@
+
 const quizContainer = document.getElementById('quizContainer');
 const quizDisplay = document.getElementById('quizDisplay');
 
