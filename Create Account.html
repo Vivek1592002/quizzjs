@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craete Account</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="./styles/create.css">
     <script src="scripts/create.js" type="module"> 
     </script>
      <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js">
-        alert("You are succesfully registered!");
     </script>
 </head>
 <body>
+    <header>
+        <h2>Quiz App</h2>
+      </header>
  <form id="myform">  
     <div id="main">
     <div class="page">
         <div class="header">
-            <h1>Create Account</h1>
+            <h1>Sign Up</h1>
         </div>
         
             <div class="name">
@@ -41,12 +43,13 @@
             <input type="password" class="password"  required placeholder="PassWord" id="Password" >
         </div>
         
-        <!-- <div class="confirm">
-            <input type="password" class="confirmpassword" required placeholder="Confirm PassWord" >
-        </div> -->
+        <div class="confirm">
+            <input type="password" id="confirmpassword" required placeholder="Confirm PassWord" >
+        </div>
         <div class="sub">
             <input type="submit" id="submit" value="Submit">
         </div>
+        
    
        
     

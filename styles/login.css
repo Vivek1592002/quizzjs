@@ -2,18 +2,34 @@
    box-sizing: border-box;
    font-family: Arial, sans-serif;
  }
+ header {
+  background-color: rgb(51, 94, 125);
+  color: whitesmoke;
+  font-size: 30px;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+header h2 {
+  margin: 0;
+}
 
  body {
    background-color: white;
    margin: 0;
    padding: 0;
+   
+   background: url('https://i.pinimg.com/originals/5b/4c/d2/5b4cd292f6f382ab8d8a51b9fcaad5ed.jpg');
  }
  
  #main .page {
    width: 80%;
-   margin: 100px auto;
-   background-color: white;
+   margin: 130px auto;
+   background-color:rgb(51, 94, 125);
    padding: 20px 50px;
+   color: white;
    border-radius: 7px;
    box-shadow: 2px 2px 5px #ccc;
    text-align: center;
@@ -45,7 +61,7 @@
    width: 100%;
    padding: 10px;
    color: white;
-   background-color: #007bff;
+   background-color: black;
    border: none;
    border-radius: 5px;
  }

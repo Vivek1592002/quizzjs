@@ -7,12 +7,22 @@ body, h1, h2, p, ul, li, button {
   
   /* Basic styling */
   body {
-    background-color: #f0f0f0;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 0vh;
+    height: absolute;
     flex-direction: column;
+  }
+  #header{
+    background-color: rgb(51, 94, 125);
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 10px 0;
+    margin-bottom: 60px;
+    text-align: center;
+    width: 100%;
   }
   
   #quizContainer {
@@ -23,9 +33,10 @@ body, h1, h2, p, ul, li, button {
   }
   
   .Button {
-    background-color:burlywood;
-    color: #fff;
-    border: none;
+    background-color:rgb(253, 253, 253);
+    color: #000000;
+    
+    border-color: blur;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;

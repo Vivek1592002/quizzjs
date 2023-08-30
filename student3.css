@@ -24,7 +24,7 @@ body, h1, h2, p, ul, li, button {
   
   .Button {
     background-color:burlywood;
-    color: #fff;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
