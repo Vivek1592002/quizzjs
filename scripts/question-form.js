@@ -57,8 +57,13 @@ const addquestion = () => {
                     .then(response => {
                         console.log(response);
 
+                    }) .catch((err) => {
+                        console.log(err);
                     })
-                    // window.location.href="Login.html"
+                    .finally(() => {
+                         window.location.href="Question-form.html"
+                    });
+                   
                 }
 
 
